@@ -1,0 +1,56 @@
+.mat-card {
+    /* Ajoutez vos styles pour la carte ici */
+    /* Exemple: */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .mat-button {
+    /* Ajoutez vos styles pour le bouton ici */
+    /* Exemple: */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mat-menu {
+    /* Ajoutez vos styles pour le menu ici */
+    /* Exemple: */
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+  }
+  
+  .mat-menu-item {
+    /* Ajoutez vos styles pour les éléments de menu ici */
+    /* Exemple: */
+    display: block;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .mat-icon {
+    /* Ajoutez vos styles pour les icônes ici */
+    /* Exemple: */
+    margin-left: 0.25rem;
+  }
+  

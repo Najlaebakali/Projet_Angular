@@ -1,0 +1,37 @@
+<div class="mat-card mb-4">
+    <div class="flex justify-between">
+      <div>
+        <button class="mat-button" onclick="toggleSortByMenu()">
+          Sort by <span id="sort">{{ sort }}</span>
+          <span class="mat-icon">expand_more</span>
+        </button>
+        <div id="sortByMenu" class="mat-menu">
+          <button onclick="onSortUpdated('desc')" class="mat-menu-item">desc</button>
+          <button onclick="onSortUpdated('asc')" class="mat-menu-item">asc</button>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <div>
+          <button class="mat-button" onclick="toggleShowMenu()">
+            Show <span id="itemsShowCount">{{ itemsShowCount }}</span>
+            <span class="mat-icon">expand_more</span>
+          </button>
+          <div id="menu" class="mat-menu">
+            <button onclick="onItemsUpdated(12)" class="mat-menu-item">12</button>
+            <button onclick="onItemsUpdated(24)" class="mat-menu-item">24</button>
+            <button onclick="onItemsUpdated(36)" class="mat-menu-item">36</button>
+          </div>
+        </div>
+        <button onclick="onColumnsUpdated(1)">
+          <span class="mat-icon">view_list</span>
+        </button>
+        <button onclick="onColumnsUpdated(3)">
+          <span class="mat-icon">view_module</span>
+        </button>
+        <button onclick="onColumnsUpdated(4)">
+          <span class="mat-icon">view_comfy</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  

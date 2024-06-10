@@ -1,0 +1,52 @@
+<div *ngIf="cart.items.length" class="max-w-7xl mx-auto">
+    <table class="mat-elevation-z8 w-full">
+      <tr>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let element of cart.items">
+        <td>
+          <img [src]="'assets/' + element.product" alt="product" class="product-image" />
+        </td>
+        <td>
+          <p class="truncate">{{ element.name }}</p>
+        </td>
+        <td>{{ element.price  }}</td>
+        <td>
+          <button (click)="onRemoveQuantity(element)">
+            <i class="material-icons">-</i>
+          </button>
+          <span>{{ element.quantity }}</span>
+          <button (click)="onAddQuantity(element)">
+            <i class="material-icons">+</i>
+          </button>
+        </td>
+        <td>{{ element.quantity * element.price }}</td>
+        <td>
+          <button (click)="onRemoveFromCart(element)">
+            <i class="material-icons">x</i>
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4"></td>
+        <td class="font-bold">
+          {{ getTotal(cart.items) }}
+        </td>
+        <td>
+          <button (click)="onClearCart()" class="clear-button">Clear All</button>
+          <button class="checkout-button"  (click)="onCheckout()">Proceed To Checkout</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div *ngIf="!cart.items.length" class="mx-auto my-3 max-w-7xl">
+    <p>Your cart is empty.</p>
+    <button routerLink="/home" class="start-shopping-button">Start Shopping</button>
+  </div>
+  

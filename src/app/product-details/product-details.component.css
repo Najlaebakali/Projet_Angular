@@ -1,0 +1,126 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-family: Montserrat;
+  background: transparent;
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  bottom: 500px; /* Ajuster la hauteur du composant */
+  padding: 20px;
+  overflow-y: auto; /* Ajouter une barre de défilement verticale si nécessaire */
+  background-color: #111;
+  border-radius: 1cm;
+}
+
+.outer {
+  position: relative;
+  background: #fff;
+  min-height: 800px; /* Ajuster la hauteur minimale du conteneur */
+  width: 550px;
+  overflow-y: auto; /* Ajouter une barre de défilement verticale si nécessaire */
+  display: flex;
+  align-items: flex-start; /* Aligner le contenu en haut */
+  top: 7%;
+  border-radius: 1cm;
+}
+
+img {
+  position: absolute;
+  top: 3.5cm;
+  right: -20px;
+  z-index: 0;
+  animation-delay: 0.5s;
+}
+
+.content {
+  animation-delay: 0.3s;
+  position: absolute;
+  left: 20px;
+  z-index: 3;
+  top: 3cm;
+}
+
+h1 {
+  color: #111;
+}
+
+p {
+  width: 280px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #aaa;
+  margin: 20px 0;
+}
+
+.bg {
+  display: inline-block;
+  color: #fff;
+  background: cornflowerblue;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: .7em;
+}
+
+.button {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 10px;
+}
+
+.button a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 11px;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  font-weight: bold;
+}
+
+.button a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  width: 0%;
+  background: #111;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.3s ease-in-out;
+  transform: skew(-25deg);
+  transform-origin: right;
+}
+
+.button a:hover:after {
+  width: 150%;
+  left: -10px;
+  transform-origin: left;
+}
+
+.button a:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.button a:nth-of-type(1) {
+  border-radius: 50px 0 0 50px;
+  border-right: none;
+}
+
+.button a:nth-of-type(2) {
+  border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+  padding-right: 8px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

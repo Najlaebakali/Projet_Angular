@@ -1,0 +1,17 @@
+<div class="wrapper">
+	<div class="outer">
+		<div class="content animated fadeInLeft">
+			<span class="bg animated fadeInDown">EXCLUSIVE</span>
+			<br><h1>{{ product.name }}<br/> {{ product.quantity }}</h1>
+			<p>{{ product.description }}</p>
+			
+			<div class="button">
+				<a href="#">{{ product.price }} $</a>
+				<a class="cart-btn" (click)="byButtonClicked(product)" *ngIf="!addedToCart">
+					<i class="cart-icon ion-bag"></i>ADD TO CART
+				</a>
+			</div>
+			</div><img [src]="getImageUrl(product)" width="300px" class="animated fadeInRight">
+		</div>
+	<span *ngIf="addedToCart">Ajouté au panier</span>
+</div>
